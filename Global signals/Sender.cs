@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Global_signals
+﻿namespace Global_signals
 {
-    class Program
+    class Sender
     {
         static void Main(string[] args)
         {
