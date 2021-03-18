@@ -47,11 +47,11 @@
       <FileName>Receiver.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Global_signals.Program">
+  <Class Name="Global_signals.Sender">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <FileName>Sender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
