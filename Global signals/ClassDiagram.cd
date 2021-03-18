@@ -3,11 +3,6 @@
   <Class Name="Global_signals.Signal&lt;T&gt;">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <NestedTypes>
-      <Delegate Name="Global_signals.Signal&lt;T&gt;.Hendler" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Signal.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
       <Class Name="Global_signals.Signal&lt;T&gt;.Exception" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Signal.cs</NewMemberFileName>
@@ -29,7 +24,7 @@
   <Class Name="Global_signals.Error">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAEAAAAAAAAACAAAIQAAACAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAACAAAIQAAACAAAAAA=</HashCode>
       <FileName>Error.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -43,15 +38,15 @@
   <Class Name="Global_signals.Receiver">
     <Position X="6.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAgAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>Receiver.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Global_signals.Sender">
+  <Class Name="Global_signals.Program">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Sender.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

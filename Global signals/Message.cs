@@ -19,14 +19,8 @@
         /// <param name="text">Sent data</param>
         public static void Send(string text)
         {
-            try
-            {   // Calls delegates that accept this type as a parameter
-                hendlers.Invoke(new Message(text));
-            }
-            catch (System.NullReferenceException e)
-            {
-                throw new Exception(e.Message);
-            }
+            // Calls delegates that accept this type as a parameter
+            hendlers?.Invoke(new Message(text));
         }
     }
 }

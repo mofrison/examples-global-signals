@@ -1,4 +1,6 @@
-﻿namespace Global_signals
+﻿using System.Collections.Generic;
+
+namespace Global_signals
 {
     /// <summary>
     /// A base class that is used to implement the mechanism for subscribing to signals.
@@ -8,6 +10,10 @@
     /// <typeparam name="T">Extended from Signal<T></typeparam>
     public abstract class Signal<T> where T : Signal<T>
     {
+        /// <summary>
+        /// Container for signal handlers
+        /// </summary>
+        /// <param name="signal">Signal instance</param>
         public delegate void Hendler(T signal);
         protected static Hendler hendlers;
 
@@ -27,6 +33,34 @@
         public static void Unsubscribe(Hendler hendlers)
         {
             Signal<T>.hendlers -= hendlers;
+        }
+
+        /// <summary>
+        /// Auxiliary method for removing duplicate delegates.
+        /// </summary>
+        /// <param name="hendlers">Reference to a method or delegates</param>
+        /// <returns>Unique hendlers</returns>
+        protected static Hendler GetUniqueHendlers(Hendler hendlers)
+        {
+            HashSet<int> hashs = new HashSet<int>();
+
+            foreach (Signal<T>.Hendler hendler in hendlers.GetInvocationList())
+            {
+                var hash = System.String.GetHashCode(
+                    hendler.Target?.GetHashCode() + "" +
+                    hendler.Method.DeclaringType + "" +
+                    hendler.Method.GetBaseDefinition()
+                    );
+
+                if (hashs.Contains(hash))
+                {
+                    hendlers -= hendler;
+                    System.Console.WriteLine("Metod " + hendler.Method.DeclaringType + " " + hendler.Method.GetBaseDefinition() + " already been added");
+                }
+                else { hashs.Add(hash); }
+            }
+
+            return hendlers;
         }
 
         /// <summary>

@@ -5,19 +5,34 @@
     /// </summary>
     class Receiver
     {
-        public static void StaticMetod(Message message)
+        public Receiver()
+        {
+            Message.Subscribe(StaticMetod);
+            Message.Subscribe(OrdinaryMetod);
+            Error.Subscribe(StaticMetod);
+            Error.Subscribe(OrdinaryMetod);
+        }
+
+        private static void StaticMetod(Message message)
         {
             System.Console.WriteLine("Test static metod: " + message.Text);
         }
 
-        public void OrdinaryMetod(Message message)
+        private void OrdinaryMetod(Message message)
         {
             System.Console.WriteLine("Test ordinary metod: " + message.Text);
+            Message.Unsubscribe(OrdinaryMetod);
         }
 
-        public static void ShowError(Error error)
+        private static void StaticMetod(Error error)
         {
-            System.Console.WriteLine(error.Text);
+            System.Console.WriteLine("Test static metod: " + error.Text);
+        }
+
+        private void OrdinaryMetod(Error error)
+        {
+            System.Console.WriteLine("Test ordinary metod: " + error.Text);
+            Error.Unsubscribe(OrdinaryMetod);
         }
     }
 }
