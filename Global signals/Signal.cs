@@ -44,7 +44,7 @@ namespace Global_signals
         {
             HashSet<int> hashs = new HashSet<int>();
 
-            foreach (Signal<T>.Hendler hendler in hendlers.GetInvocationList())
+            foreach (Hendler hendler in hendlers.GetInvocationList())
             {
                 var hash = System.String.GetHashCode(
                     hendler.Target?.GetHashCode() + "" +
@@ -55,7 +55,6 @@ namespace Global_signals
                 if (hashs.Contains(hash))
                 {
                     hendlers -= hendler;
-                    System.Console.WriteLine("Metod " + hendler.Method.DeclaringType + " " + hendler.Method.GetBaseDefinition() + " already been added");
                 }
                 else { hashs.Add(hash); }
             }

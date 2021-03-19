@@ -24,15 +24,6 @@
         }
 
         /// <summary>
-        /// Overrides a similar method of the base class.
-        /// Checks whether the delegate being added is present in the list of already added delegates.
-        /// </summary>
-        /// <param name="hendlers">Reference to a method or delegates</param>
-        public new static void Unsubscribe(Hendler hendlers)
-        {
-            Signal<Error>.hendlers -= hendlers;
-        }
-        /// <summary>
         /// The method required to send the signal
         /// </summary>
         /// <param name="text">Sent data</param>
