@@ -1,4 +1,4 @@
-﻿namespace Global_signals
+namespace Global_signals
 {
     /// <summary>
     /// A more complex example of signal implementation. Adds only unique methods as delegates.
