@@ -1,0 +1,3 @@
+[submodule "Simple C#/global-signals"]
+	path = "Simple C#/global-signals"
+	url = https://github.com/mofrison/global-signals
