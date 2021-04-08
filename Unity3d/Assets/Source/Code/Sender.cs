@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ru.mofrison.global_signals
+namespace ru.mofrison.GlobalSignals
 {
     public class Sender : MonoBehaviour
     {   

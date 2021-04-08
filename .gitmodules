@@ -1,3 +1,6 @@
 [submodule "Simple C#/global-signals"]
 	path = "Simple C#/global-signals"
 	url = https://github.com/mofrison/global-signals
+[submodule "global-signals"]
+	path = Unity3d/Assets/Source/Code/global-signals
+	url = https://github.com/mofrison/global-signals
